@@ -1,0 +1,430 @@
+/* ==================== CONVERTIDOR TEXTO-BINARIO - ESTILOS ====================
+ * Archivo: styles.css
+ * Descripción: Estilos principales de la aplicación
+ * Autor: Kelvin Piña Gomez
+ * Fecha: Octubre 2025
+ * ============================================================================= */
+
+/* ==================== VARIABLES Y RESET ==================== */
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #ec4899;
+    --bg-light: #f8fafc;
+    --bg-dark: #0f172a;
+    --text-light: #1e293b;
+    --text-dark: #f1f5f9;
+    --card-light: #ffffff;
+    --card-dark: #1e293b;
+    --border-light: #e2e8f0;
+    --border-dark: #334155;
+    --success: #10b981;
+    --error: #ef4444;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: var(--transition);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== TEMA OSCURO ==================== */
+body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode .card {
+    background: var(--card-dark);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #0f172a;
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .theme-toggle {
+    background: var(--card-dark);
+}
+
+body.dark-mode .result {
+    background: linear-gradient(135deg, #1e3a5f, #0f2744);
+}
+
+body.dark-mode footer {
+    background: var(--card-dark);
+    border-color: var(--border-dark);
+}
+
+/* ==================== HEADER ==================== */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 0.6s ease;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Toggle de tema en el header */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+    animation: fadeIn 0.8s ease;
+}
+
+/* ==================== TARJETAS ==================== */
+.card {
+    background: var(--card-light);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card h2::before {
+    content: '➤';
+    font-size: 1.5rem;
+}
+
+/* ==================== INPUTS Y TEXTAREAS ==================== */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+    margin-bottom: 1rem;
+    background: var(--card-light);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+    font-family: 'Courier New', monospace;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* ==================== BOTONES ==================== */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+button {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary-color), #db2777);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==================== ÁREA DE RESULTADO ==================== */
+.result {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    display: none;
+}
+
+.result.show {
+    display: block;
+    animation: slideIn 0.5s ease;
+}
+
+/* ==================== MENSAJES DE ERROR ==================== */
+.error-message {
+    background: #fee;
+    color: var(--error);
+    padding: 1rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--error);
+    margin-top: 1rem;
+    display: none;
+    animation: shake 0.5s ease;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: var(--card-light);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+    margin-top: auto;
+}
+
+.instructions {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.instructions h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.instructions ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.credits {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+    opacity: 0.7;
+}
+
+/* ==================== NOTIFICACIÓN DE COPIADO ==================== */
+.notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--success);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transform: translateY(150%);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+/* ==================== ANIMACIONES ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        min-width: 100%;
+    }
+
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .notification {
+        right: 1rem;
+        left: 1rem;
+        bottom: 1rem;
+    }
+}
+
+/* ==================== ICONOS (EMOJIS) ==================== */
+.icon {
+    display: inline-block;
+    font-size: 1.2rem;
+}

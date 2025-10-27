@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convertidor de texto a binario y viceversa. Soporta UTF-8, emojis y caracteres especiales.">
+    <meta name="author" content="Kelvin Piña Gomez">
+    <meta name="keywords" content="binario, texto, convertidor, UTF-8, emojis, binary, converter">
+    
+    <!-- Título de la página -->
+    <title>Convertidor Texto-Binario | Binary Converter</title>
+    
+    <!-- Favicon (opcional - crear archivo favicon.ico en carpeta assets) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Convertidor Texto-Binario">
+    <meta property="og:description" content="Convierte texto a binario y viceversa con soporte UTF-8">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <span id="themeIcon">🌙</span>
+        </button>
+        <h1>🔢 Convertidor Texto-Binario</h1>
+        <p class="subtitle">Convierte texto a binario y viceversa con soporte UTF-8</p>
+    </header>
+
+    <!-- ==================== CONTENEDOR PRINCIPAL ==================== -->
+    <div class="container">
+        <!-- TARJETA: TEXTO A BINARIO -->
+        <div class="card">
+            <h2>Texto a Binario</h2>
+            <label for="textInput">Ingresa tu texto (soporta emojis y caracteres especiales):</label>
+            <textarea 
+                id="textInput" 
+                placeholder="Escribe aquí tu texto... Ejemplo: ¡Hola mundo! 🌍"
+                aria-label="Campo de entrada de texto"
+            ></textarea>
+            
+            <div class="button-group">
+                <button class="btn-primary" id="convertToBinary">
+                    <span class="icon">➡️</span>
+                    Convertir a Binario
+                </button>
+                <button class="btn-success hidden" id="copyBinary">
+                    <span class="icon">📋</span>
+                    Copiar Binario
+                </button>
+            </div>
+
+            <div id="binaryResult" class="result"></div>
+        </div>
+
+        <!-- TARJETA: BINARIO A TEXTO -->
+        <div class="card">
+            <h2>Binario a Texto</h2>
+            <label for="binaryInput">Ingresa tu código binario (8 bits por carácter, separados por espacios):</label>
+            <textarea 
+                id="binaryInput" 
+                placeholder="Ejemplo: 01001000 01101111 01101100 01100001"
+                aria-label="Campo de entrada de binario"
+            ></textarea>
+            
+            <div class="button-group">
+                <button class="btn-secondary" id="convertToText">
+                    <span class="icon">⬅️</span>
+                    Convertir a Texto
+                </button>
+                <button class="btn-success hidden" id="copyText">
+                    <span class="icon">📋</span>
+                    Copiar Texto
+                </button>
+            </div>
+
+            <div id="textResult" class="result"></div>
+            <div id="errorMessage" class="error-message">
+                ⚠️ <strong>Error:</strong> El binario ingresado no es válido. Asegúrate de que sea una secuencia de 0s y 1s en múltiplos de 8 bits.
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="instructions">
+            <h3>📖 Instrucciones de uso:</h3>
+            <ul>
+                <li><strong>Texto a Binario:</strong> Escribe cualquier texto (incluyendo emojis y acentos) y haz clic en "Convertir a Binario".</li>
+                <li><strong>Binario a Texto:</strong> Pega una secuencia binaria válida (8 bits por carácter) y haz clic en "Convertir a Texto".</li>
+                <li><strong>Copiar:</strong> Usa los botones de copiar para guardar el resultado en tu portapapeles.</li>
+                <li><strong>Tema:</strong> Cambia entre modo claro y oscuro con el botón 🌙/☀️ en la esquina superior derecha.</li>
+                <li><strong>Atajo:</strong> Usa <kbd>Ctrl + Enter</kbd> en cualquier campo para convertir rápidamente.</li>
+            </ul>
+        </div>
+        <div class="credits">
+            <p>💻 Desarrollado con HTML5, CSS3 y JavaScript vanilla</p>
+            <p>© 2025 - Kelvin Piña Gomez | Código abierto y gratuito</p>
+        </div>
+    </footer>
+
+    <!-- ==================== NOTIFICACIÓN ==================== -->
+    <div class="notification" id="notification">
+        ✅ ¡Copiado al portapapeles!
+    </div>
+
+    <!-- ==================== JAVASCRIPT EXTERNO ==================== -->
+    <script src="js/app.js"></script>
+</body>
+</html>
