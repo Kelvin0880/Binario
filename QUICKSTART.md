@@ -1,12 +1,18 @@
 # 🚀 INICIO RÁPIDO
 
+**🌐 Demo en vivo:** [https://kelvin0880.github.io/Binario/](https://kelvin0880.github.io/Binario/)  
+**📦 Repositorio:** [https://github.com/Kelvin0880/Binario](https://github.com/Kelvin0880/Binario)
+
 ## ⚡ Usa la Aplicación Ahora Mismo
 
-### Opción 1: Abrir Localmente (MÁS RÁPIDO)
+### Opción 1: Usar Online (INMEDIATO)
+🎯 **Simplemente abre:** [https://kelvin0880.github.io/Binario/](https://kelvin0880.github.io/Binario/)
+
+### Opción 2: Abrir Localmente (SIN INTERNET)
 1. Haz doble clic en `index.html`
 2. ¡Listo! Ya funciona en tu navegador
 
-### Opción 2: GitHub Pages (GRATIS Y ONLINE)
+### Opción 3: GitHub Pages (YA ESTÁ ONLINE)
 ```powershell
 # 1. Navega a la carpeta
 cd "c:\Users\kelvi\Downloads\Binario"

@@ -2,9 +2,11 @@
 
 Una aplicación web moderna y responsive para convertir texto a binario y viceversa, con soporte completo para UTF-8, emojis y caracteres especiales.
 
-**Desarrollado por:** Kelvin Piña Gomez  
-**Fecha:** Octubre 2025  
-**Licencia:** MIT
+**🌐 Demo en vivo:** [https://kelvin0880.github.io/Binario/](https://kelvin0880.github.io/Binario/)  
+**📦 Repositorio:** [https://github.com/Kelvin0880/Binario](https://github.com/Kelvin0880/Binario)  
+**👤 Desarrollado por:** Kelvin Piña Gomez  
+**📅 Fecha:** Octubre 2025  
+**📄 Licencia:** MIT
 
 ## ✨ Características
 

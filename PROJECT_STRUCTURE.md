@@ -2,6 +2,12 @@
 
 Este documento explica la organización del proyecto siguiendo las mejores prácticas de desarrollo web.
 
+**🌐 Demo en vivo:** [https://kelvin0880.github.io/Binario/](https://kelvin0880.github.io/Binario/)  
+**📦 Repositorio:** [https://github.com/Kelvin0880/Binario](https://github.com/Kelvin0880/Binario)  
+**👤 Autor:** Kelvin Piña Gomez
+
+---
+
 ## 📂 Estructura de Carpetas
 
 ```

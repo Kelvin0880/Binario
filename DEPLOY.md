@@ -1,6 +1,14 @@
 # 🚀 Guía Rápida de Despliegue
 
-## Opción 1: GitHub Pages (RECOMENDADO - GRATIS)
+**🌐 Esta aplicación ya está desplegada en:**  
+👉 [https://kelvin0880.github.io/Binario/](https://kelvin0880.github.io/Binario/)
+
+**📦 Repositorio GitHub:**  
+👉 [https://github.com/Kelvin0880/Binario](https://github.com/Kelvin0880/Binario)
+
+---
+
+## Opción 1: GitHub Pages (RECOMENDADO - GRATIS) ✅ YA ACTIVO
 
 ### Pasos rápidos:
 

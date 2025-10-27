@@ -1,5 +1,10 @@
 # 📋 Registro de Cambios
 
+**🌐 Demo en vivo:** [https://kelvin0880.github.io/Binario/](https://kelvin0880.github.io/Binario/)  
+**📦 Repositorio:** [https://github.com/Kelvin0880/Binario](https://github.com/Kelvin0880/Binario)
+
+---
+
 ## [2.0.0] - 2025-10-27
 
 ### 🎉 Refactorización Completa - Mejores Prácticas
